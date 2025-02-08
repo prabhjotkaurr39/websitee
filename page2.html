@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Ronaldo!</title>
+    <style>
+        body {
+            text-align: center;
+            background: url('ronaldo2.jpg') no-repeat center center fixed; /* Set Ronaldo's image as background */
+            background-size: cover; /* Ensure the background covers the entire page */
+            font-family: 'Bahnschrift Light', sans-serif;
+            color: rgb(255, 255, 255);
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space between top and bottom elements */
+            align-items: center;
+            position: relative;
+        }
+        h1 {
+            font-size: 30px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            margin-top: 30px; 
+        }
+        h2 {
+            font-size: 50px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            margin-top: 30px;
+        }
+        a {
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-bottom: 30px; 
+        }
+        a:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Flying Ronaldo image */
+        .ronaldo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 180px; /* Image size */
+            animation: revolveAround 10s linear infinite; /* Animation to revolve */
+            transform-origin: 0% 0%; /* Set the center of the animation */
+        }
+
+        /* Keyframes to make the image revolve in a circular path */
+        @keyframes revolveAround {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(300px) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(300px) rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1> <b>I heardd... it's your</b> </h1>
+        <h2>BIRTHDAYY BITCHH</h2>
+    </div>
+    <a href="page3.html">Click Here</a>
+    
+    <!-- Add the Ronaldo image with transparent background -->
+    <img src="ronaldosmirk.png" alt="Ronaldo" class="ronaldo">
+</body>
+</html>

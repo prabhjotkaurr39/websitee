@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Ronaldo!</title>
+    <style>
+        body {
+            background: url('fuckmessi.jpg') no-repeat center center fixed; /* Initial background */
+            background-size: cover;
+            font-family: 'Bahnschrift Light', sans-serif;
+            color: rgb(255, 255, 255);
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Style for the flying image */
+        .flying-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 180px;
+            animation: revolveAround 10s linear infinite; /* Animation to revolve */
+            transform-origin: 0% 0%; /* Set the center of the animation */
+        }
+
+        /* Flying effect */
+        @keyframes flying {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg) translateX(300px) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg) translateX(300px) rotate(-360deg);
+            }
+        }
+
+        .flying-image {
+            animation: flying 10s infinite;
+        }
+    </style>
+</head>
+<body>
+    <img class="flying-image" id="flying-image" src="shit.png" alt="Flying Ronaldo">
+    
+    <script>
+        // Array of background images and corresponding flying images
+        const backgrounds = [
+            { bg: 'url("ronaldo2.jpg")', img: 'goat.png' },
+        ];
+
+        let currentIndex = 0;
+
+        // Function to change background and flying image
+        function changeBackgroundAndImage() {
+            currentIndex = (currentIndex + 1) % backgrounds.length;
+
+            // Change background
+            document.body.style.backgroundImage = backgrounds[currentIndex].bg;
+
+            // Change flying image
+            const flyingImage = document.getElementById('flying-image');
+            flyingImage.src = backgrounds[currentIndex].img;
+        }
+
+        // Change the background and flying image every 5 seconds
+        setInterval(changeBackgroundAndImage, 5000);
+    </script>
+</body>
+</html>

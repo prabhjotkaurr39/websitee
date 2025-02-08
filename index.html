@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Ronaldo!</title>
+    <style>
+        body {
+            text-align: center;
+            background: linear-gradient(45deg, #ffffff, #ffffff);
+            font-family: 'Bahnschrift Light', sans-serif;
+            color: rgb(0, 0, 0);
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 50px;
+            margin-top: 50px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 50px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        @keyframes dance {
+            0%, 100% { transform: rotate(-10deg) translateY(0); }
+            50% { transform: rotate(10deg) translateY(-10px); }
+        }
+        img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s;
+            animation: dance 0.5s infinite alternate ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <h1><b>Touch Me</b></h1>
+        <h2>(appropriately)</h2>
+        <div class="container">
+            <!-- Updated to link to page2.html when clicked -->
+            <a href="page2.html">
+                <img src="ronaldo1.jpg" alt="Ronaldo">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
